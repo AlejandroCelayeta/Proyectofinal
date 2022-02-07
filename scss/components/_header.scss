@@ -1,0 +1,40 @@
+@import '../base/variables';
+
+/* Header */
+.header-container {
+	.logo {
+		display: flex;
+		grid-area: 1;
+		width: 25vh;
+		height: auto;
+		margin: 0%;
+		margin-left: 3%;
+	}
+
+	.img-header {
+		@media only screen and (min-device-width : 480px) and (max-device-width : 1024px) {
+			display: none;
+		}
+
+		@media only screen and (min-device-width : 320px) and (max-device-width : 767px) {
+			display: none;
+		}
+
+		display: flex;
+		justify-content: space-between;
+		grid-template-areas: 2;
+		width: 50%;
+		vertical-align: center;
+		height: auto;
+		margin: 0%;
+	}
+
+	display: grid;
+	width: 100%;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-areas: '1 1'
+	'2 2';
+}
