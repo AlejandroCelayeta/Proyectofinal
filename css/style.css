@@ -20,46 +20,46 @@
 /* Variables de colores fuente */
 /* Variables de colores */
 /* Body */
-main {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  text-align: center;
-  padding-top: 5%;
-  padding-right: 15%;
-  padding-left: 15%;
-}
-main body {
-  /* Parámetros del body */
-  font-family: "Fredoka One", cursive;
-  font-family: "Oswald", sans-serif;
-  color: #0e0a0a;
-  text-align: center;
-  box-sizing: border-box;
-  justify-content: center;
-}
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
-  main body {
+  body {
     background-color: #00805a;
     font-size: 1em;
     font-weight: bolder;
     color: #0c4720;
   }
-  main body .menu {
+  body .menu {
     background-color: #00805a;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 479px) {
-  main body * {
+  body {
+    /* Parámetros del body */
+    font-family: "Fredoka One", cursive;
+    font-family: "Oswald", sans-serif;
+    color: #0e0a0a;
+    text-align: center;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  body * {
     background-color: #00805a;
     font-size: 0.8em;
     font-weight: bolder;
   }
-  main body .container {
+  body main {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+  body .container {
     box-sizing: content-box;
     padding: 8px;
     margin: 0%;
@@ -72,20 +72,20 @@ main body {
     height: 100%;
     padding-bottom: 0%;
   }
-  main body .container p {
+  body .container p {
     color: #0e0a0a;
     font-size: 1.2em;
   }
-}
-main body a {
-  text-decoration: none;
+  body a {
+    text-decoration: none;
+  }
 }
 
 /* Lista de colores de footer */
 /* Extends */
 footer {
   background-color: #6567ab;
-  border: grey solid 1px;
+  border: 1px solid grey;
 }
 
 /* Variables */
@@ -97,7 +97,7 @@ footer {
 /* Mapas */
 /* Mapa input mail suscribir */
 /*Propiedades del footer*/
-.p-seguir {
+footer .p-seguir {
   font-size: 1em;
   font-weight: bold;
   color: #0e0a0a;
@@ -108,21 +108,20 @@ footer {
   margin: -5%;
 }
 @media only screen and (min-device-width: 480px) and (max-device-width: 1024px) {
-  .p-seguir {
+  footer .p-seguir {
     color: #8d0f35;
   }
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .p-seguir {
+  footer .p-seguir {
     color: #060b52;
   }
 }
-.p-seguir:hover {
+footer .p-seguir:hover {
   transform: scale(1.1);
   color: #8d0f35;
 }
-
-.linkedin {
+footer .linkedin {
   display: block;
   margin-left: 0.5em;
   margin-bottom: 0.6em;
@@ -130,12 +129,11 @@ footer {
   width: 50px;
   height: auto;
 }
-.linkedin:hover {
+footer .linkedin:hover {
   transition: 2.3s;
   transform: rotate(360deg);
 }
-
-.facebook {
+footer .facebook {
   display: block;
   margin-left: 0.5em;
   margin-bottom: 0.2em;
@@ -143,12 +141,11 @@ footer {
   width: 60px;
   height: auto;
 }
-.facebook:hover {
+footer .facebook:hover {
   transition: 2.3s;
   transform: rotate(360deg);
 }
-
-.parrafo-copy {
+footer .parrafo-copy {
   font-size: 0.8em;
   font-weight: bold;
   color: #0e0a0a;
@@ -158,34 +155,34 @@ footer {
   margin-right: 11%;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-  .parrafo-copy {
+  footer .parrafo-copy {
     color: #8d0f35;
   }
 }
-
-.footer-redes {
+footer .footer-redes {
+  background-color: #6567ab;
   max-width: 100%;
   display: grid;
   grid-template-areas: "a a" "b c" "d d";
 }
-.footer-redes .f-head {
+footer .footer-redes .f-head {
   margin: 0%;
   padding-top: 15%;
   text-align: center;
   justify-self: center;
   grid-area: a;
 }
-.footer-redes .fb {
+footer .footer-redes .fb {
   margin: 0%;
   padding: 0%;
   justify-self: center;
   grid-area: b;
 }
-.footer-redes .ln {
+footer .footer-redes .ln {
   justify-self: center;
   grid-area: c;
 }
-.footer-redes .copy-r {
+footer .footer-redes .copy-r {
   grid-area: d;
   text-align: center;
   margin-left: 10%;
@@ -200,28 +197,24 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 60%;
+  padding-top: 20%;
 }
-
-.form-control:hover {
+.contenedor-suscribe .form-control:hover {
   background-color: #a74190;
 }
-.form-control:focus {
+.contenedor-suscribe .form-control:focus {
   background-color: #8d0f35;
   font-weight: bolder;
 }
-
-.form-control {
+.contenedor-suscribe .form-control {
   font-size: 1em;
   color: white;
   background-color: #b14d4d;
 }
-
-.input-group-text {
+.contenedor-suscribe .input-group-text {
   align-items: center;
 }
-
-.btn-primary {
+.contenedor-suscribe .btn-primary {
   margin-top: 1em;
   margin-bottom: 10em;
 }
@@ -276,22 +269,21 @@ footer {
 /*Estilos del menú*/
 .menu {
   display: grid;
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  /* Estilo del boton cuando el menú está expandido*/
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
 }
-
-ul {
+.menu ul {
   display: none;
 }
-
-input:checked ~ ul {
+.menu input:checked ~ ul {
   display: table-cell;
   margin-left: 20%;
 }
-
-input {
+.menu input {
   display: none;
 }
-
-label {
+.menu label {
   box-sizing: border-box;
   display: grid;
   width: 48px;
@@ -301,24 +293,18 @@ label {
   text-align: center;
   user-select: none;
 }
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-label:hover {
+.menu label:hover {
   background: #fffefe;
 }
-
-/* Estilo del boton cuando el menú está expandido*/
-input:checked ~ label {
+.menu input:checked ~ label {
   background: #fffefe;
 }
-
-ul {
+.menu ul {
   margin-top: 1px;
   padding: 1px;
   width: 200px;
 }
-
-li {
+.menu li {
   display: block;
   background: #6567ab;
   text-align: center;
@@ -328,14 +314,11 @@ li {
   border-radius: 4px;
   font-weight: bolder;
 }
-
-li a {
+.menu li a {
   color: #0e0a0a;
   font-size: 0.8em;
 }
-
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-li:hover {
+.menu li:hover {
   filter: brightness(110%);
 }
 
@@ -381,22 +364,21 @@ li:hover {
 /*Estilos del menú*/
 .menu {
   display: grid;
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  /* Estilo del boton cuando el menú está expandido*/
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
 }
-
-ul {
+.menu ul {
   display: none;
 }
-
-input:checked ~ ul {
+.menu input:checked ~ ul {
   display: table-cell;
   margin-left: 20%;
 }
-
-input {
+.menu input {
   display: none;
 }
-
-label {
+.menu label {
   box-sizing: border-box;
   display: grid;
   width: 48px;
@@ -406,24 +388,18 @@ label {
   text-align: center;
   user-select: none;
 }
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-label:hover {
+.menu label:hover {
   background: #fffefe;
 }
-
-/* Estilo del boton cuando el menú está expandido*/
-input:checked ~ label {
+.menu input:checked ~ label {
   background: #fffefe;
 }
-
-ul {
+.menu ul {
   margin-top: 1px;
   padding: 1px;
   width: 200px;
 }
-
-li {
+.menu li {
   display: block;
   background: #6567ab;
   text-align: center;
@@ -433,14 +409,11 @@ li {
   border-radius: 4px;
   font-weight: bolder;
 }
-
-li a {
+.menu li a {
   color: #0e0a0a;
   font-size: 0.8em;
 }
-
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-li:hover {
+.menu li:hover {
   filter: brightness(110%);
 }
 
@@ -479,6 +452,7 @@ li:hover {
 /* Variables de colores */
 /* Título */
 .title {
+  /* Utilización de Mixin */
   display: block;
   text-align: left;
   font-size: 1.4em;
@@ -487,9 +461,7 @@ li:hover {
   padding-left: 10%;
   color: #0e0a0a;
 }
-
-/* Utilización de Mixin */
-.title {
+.title .title {
   border: 2px ridge #a74190;
 }
 
